@@ -12,7 +12,9 @@ type Producto = {
 
 type FormData = { nombre: string; precio: string; stock: string };
 
-const API_URL = (process.env.NEXT_PUBLIC_API_URL ?? "http://localhost:3000").replace(/\/$/, "");
+// El valor por defecto permite que el sitio estático publicado siempre use la API pública.
+// Para desarrollo local puede sobrescribirse con NEXT_PUBLIC_API_URL=http://localhost:3000.
+const API_URL = (process.env.NEXT_PUBLIC_API_URL ?? "https://backendupbtest-6d55.onrender.com").replace(/\/$/, "");
 const emptyForm: FormData = { nombre: "", precio: "", stock: "" };
 
 const money = new Intl.NumberFormat("es-BO", { style: "currency", currency: "BOB", minimumFractionDigits: 2 });
