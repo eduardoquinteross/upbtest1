@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Nexo | Ideas que avanzan",
-  description: "Estrategia, diseño y tecnología para tu próximo paso.",
+  title: "NODO | Control de inventario",
+  description: "Gestión de productos conectada a una API REST.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
